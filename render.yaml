@@ -14,6 +14,5 @@ services:
         value: "admin123"
       - key: N8N_PORT
         value: "5678"
-      - key: WEB_CONCURRENCY
-        value: "1"
+
 
