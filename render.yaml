@@ -2,8 +2,6 @@ services:
   - type: web
     name: n8n
     env: docker
-    repo: https://github.com/darcscar/n8n-on-render-darc
-    branch: main
     dockerfilePath: Dockerfile
     plan: free
     envVars:
@@ -15,3 +13,5 @@ services:
         value: "admin123"
       - key: N8N_PORT
         value: "5678"
+      - key: WEB_CONCURRENCY
+        value: "1"
