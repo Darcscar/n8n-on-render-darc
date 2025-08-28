@@ -14,7 +14,7 @@ services:
       - key: N8N_BASIC_AUTH_PASSWORD
         value: "admin123"
 
-      # --- Host & Port (use Render-assigned port) ---
+      # --- Host & Port inside container ---
       - key: N8N_HOST
         value: "0.0.0.0"
       - key: N8N_PORT
@@ -34,7 +34,7 @@ services:
       - key: DB_POSTGRESDB_PASSWORD
         value: "5n1KYTZQmr3DVSoI5ooMNTavodraMBwa"
 
-      # --- Webhook & Editor URLs ---
+      # --- Public URLs ---
       - key: WEBHOOK_URL
         value: "https://n8n-kbew.onrender.com"
       - key: N8N_EDITOR_BASE_URL
@@ -43,3 +43,11 @@ services:
       # --- Task runners ---
       - key: N8N_RUNNERS_ENABLED
         value: "true"
+      - key: N8N_TASK_RUNNER_AUTH_USER
+        value: "admin"
+      - key: N8N_TASK_RUNNER_AUTH_PASSWORD
+        value: "admin123"
+
+      # --- Debug logging (optional) ---
+      - key: DEBUG
+        value: "*"
