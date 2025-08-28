@@ -6,13 +6,42 @@ services:
     plan: free
     autoDeploy: true
     envVars:
+      # --- Basic Auth ---
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
       - key: N8N_BASIC_AUTH_USER
         value: "admin"
       - key: N8N_BASIC_AUTH_PASSWORD
         value: "admin123"
+
+      # --- Host & Port ---
+      - key: N8N_HOST
+        value: "0.0.0.0"
       - key: N8N_PORT
         value: "5678"
+
+      # --- PostgreSQL Database ---
+      - key: DB_TYPE
+        value: "postgresdb"
+      - key: DB_POSTGRESDB_HOST
+        value: "dpg-d2o30lur433s73as84c0-a"
+      - key: DB_POSTGRESDB_PORT
+        value: "5432"
+      - key: DB_POSTGRESDB_DATABASE
+        value: "n8n_db_6mzj"
+      - key: DB_POSTGRESDB_USER
+        value: "n8n_db_6mzj_user"
+      - key: DB_POSTGRESDB_PASSWORD
+        value: "5n1KYTZQmr3DVSoI5ooMNTavodraMBwa"
+
+      # --- Webhook & Editor URLs (replace with your Render URL) ---
+      - key: WEBHOOK_URL
+        value: "https://YOUR_RENDER_APP.onrender.com"
+      - key: N8N_EDITOR_BASE_URL
+        value: "https://YOUR_RENDER_APP.onrender.com"
+
+      # --- Task runners ---
+      - key: N8N_RUNNERS_ENABLED
+        value: "true"
 
 
