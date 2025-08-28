@@ -14,11 +14,11 @@ services:
       - key: N8N_BASIC_AUTH_PASSWORD
         value: "admin123"
 
-      # --- Host & Port ---
+      # --- Host & Port (use Render-assigned port) ---
       - key: N8N_HOST
         value: "0.0.0.0"
       - key: N8N_PORT
-        value: "5678"
+        value: "$PORT"
 
       # --- PostgreSQL Database ---
       - key: DB_TYPE
@@ -34,7 +34,7 @@ services:
       - key: DB_POSTGRESDB_PASSWORD
         value: "5n1KYTZQmr3DVSoI5ooMNTavodraMBwa"
 
-      # --- Webhook & Editor URLs (replace with your Render URL) ---
+      # --- Webhook & Editor URLs ---
       - key: WEBHOOK_URL
         value: "https://n8n-kbew.onrender.com"
       - key: N8N_EDITOR_BASE_URL
@@ -43,5 +43,3 @@ services:
       # --- Task runners ---
       - key: N8N_RUNNERS_ENABLED
         value: "true"
-
-
