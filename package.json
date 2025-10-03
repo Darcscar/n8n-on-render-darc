@@ -2,8 +2,7 @@
   "name": "n8n-render-supabase",
   "version": "1.0.0",
   "scripts": {
-    "start": "npx n8n start",
-    "build": "npx n8n build"
+    "start": "npx n8n start"
   },
   "dependencies": {
     "n8n": "latest"
