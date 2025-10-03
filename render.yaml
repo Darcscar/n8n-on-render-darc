@@ -20,13 +20,13 @@ services:
       - key: N8N_BASIC_AUTH_USER
         value: "admin"
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: "<your-password>"
+        value: "<your-admin-password>"
       - key: N8N_ENCRYPTION_KEY
-        value: "<32+ char random string>"
+        value: "<32+ character random string>"
       - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
         value: "true"
       - key: DB_TYPE
-        value: postgresdb
+        value: "postgresdb"
       - key: DB_POSTGRESDB_HOST
         value: "<supabase-ipv4-address>"
       - key: DB_POSTGRESDB_PORT
@@ -46,9 +46,9 @@ services:
       - key: PGPORT
         value: "5432"
       - key: PGDATABASE
-        value: postgres
+        value: "postgres"
       - key: PGUSER
-        value: postgres
+        value: "postgres"
       - key: PGPASSWORD
         value: "<supabase-password>"
       - key: NODE_OPTIONS
