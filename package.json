@@ -6,6 +6,6 @@
     "build": "npx n8n build"
   },
   "dependencies": {
-    "n8n": "^2.220.0"
+    "n8n": "latest"
   }
 }
