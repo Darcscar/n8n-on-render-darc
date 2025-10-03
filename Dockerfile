@@ -1,10 +1,15 @@
-FROM node:20-bullseye
+FROM node:20-slim
 
-# Install n8n globally
-RUN npm install -g n8n
+WORKDIR /usr/src/app
 
-# Expose port
-EXPOSE 5678
+COPY package*.json ./
 
-# Set default command
-CMD ["n8n"]
+RUN npm install --legacy-peer-deps
+
+COPY . .
+
+RUN npm run build
+
+ENV NODE_OPTIONS="--dns-result-order=ipv4first"
+
+CMD ["npx", "n8n", "start"]
