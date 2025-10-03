@@ -14,21 +14,21 @@ services:
       - key: N8N_PROTOCOL
         value: "https"
       - key: WEBHOOK_URL
-        value: "https://n8n-kbew.onrender.com"
+        value: "https://<your-render-app>.onrender.com"
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
       - key: N8N_BASIC_AUTH_USER
         value: "admin"
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: "admin123"
+        value: "<your-password>"
       - key: N8N_ENCRYPTION_KEY
-        value: "u8Fj9k2VxP4nL6sR3bQwZ1mT7yHcD5aG"
+        value: "<32+ char random string>"
       - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
         value: "true"
       - key: DB_TYPE
-        value: "postgresdb"
+        value: postgresdb
       - key: DB_POSTGRESDB_HOST
-        value: "db.tbvindijafgobvhpkemx.supabase.co"
+        value: "<supabase-ipv4-address>"
       - key: DB_POSTGRESDB_PORT
         value: "5432"
       - key: DB_POSTGRESDB_DATABASE
@@ -36,20 +36,20 @@ services:
       - key: DB_POSTGRESDB_USER
         value: "postgres"
       - key: DB_POSTGRESDB_PASSWORD
-        value: "Lordjukay434@"
+        value: "<supabase-password>"
       - key: DB_POSTGRESDB_SSL
         value: "true"
       - key: PGSSLMODE
-        value: "require"
+        value: require
       - key: PGHOST
-        value: "db.tbvindijafgobvhpkemx.supabase.co"
+        value: "<supabase-ipv4-address>"
       - key: PGPORT
         value: "5432"
       - key: PGDATABASE
-        value: "postgres"
+        value: postgres
       - key: PGUSER
-        value: "postgres"
+        value: postgres
       - key: PGPASSWORD
-        value: "Lordjukay434@"
+        value: "<supabase-password>"
       - key: NODE_OPTIONS
         value: "--dns-result-order=ipv4first"
