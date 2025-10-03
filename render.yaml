@@ -5,7 +5,7 @@ services:
     plan: free
     region: oregon
     buildCommand: "npm install --legacy-peer-deps"
-    startCommand: "sh -c 'NODE_OPTIONS=--dns-result-order=ipv4first npx n8n start'"
+    startCommand: "sh -c 'npx n8n start'"
     envVars:
       - key: N8N_HOST
         value: "0.0.0.0"
@@ -22,7 +22,7 @@ services:
       - key: N8N_BASIC_AUTH_PASSWORD
         value: "admin123"
       - key: N8N_ENCRYPTION_KEY
-        value: "<32+ character random string>"
+        value: "u8Fj9k2VxP4nL6sR3bQwZ1mT7yHcD5aG"
       - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
         value: "true"
       - key: DB_TYPE
@@ -39,8 +39,6 @@ services:
         value: "Lordjukay434@"
       - key: DB_POSTGRESDB_SSL
         value: "true"
-      - key: PGSSLMODE
-        value: require
       - key: PGHOST
         value: "123.45.67.89"
       - key: PGPORT
@@ -51,5 +49,7 @@ services:
         value: "postgres"
       - key: PGPASSWORD
         value: "Lordjukay434@"
-      - key: NODE_OPTIONS
-        value: "--dns-result-order=ipv4first"
+      - key: PGSSLMODE
+        value: "require"
+      - key: PG_FORCE_IPV4
+        value: "true"
