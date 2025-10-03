@@ -8,14 +8,10 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install dependencies (fix peer deps)
-npm install --legacy-peer-deps && npm run build
-
+RUN npm install --legacy-peer-deps
 
 # Copy rest of the app
 COPY . .
-
-# Build n8n
-RUN npm run build
 
 # Force Node to prefer IPv4 (fix Supabase ENETUNREACH)
 ENV NODE_OPTIONS="--dns-result-order=ipv4first"
@@ -23,5 +19,5 @@ ENV NODE_OPTIONS="--dns-result-order=ipv4first"
 # Expose port
 EXPOSE 10000
 
-# Start command
+# Start n8n directly (no build step needed)
 CMD ["npx", "n8n", "start"]
